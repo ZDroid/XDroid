@@ -80,6 +80,13 @@ while 1: # Be careful with these! it might send you to an infinite loop
   if ircmsg.find(":Hello "+ botnick) != -1: 
     hello()
 
+  elif ircmsg.find("#shell-fu") != -1:
+        url="http://feeds.feedburner.com/Shell-fu"
+        feed = feedparser.parse(url)
+        for i in range(1,6):
+                news=feed['items'][i].title + ' Link: ' + feed['items'][i].link
+                ircsock.send("PRIVMSG "+ channel + " :~Shell-fu: " + news + "\n")
+
   elif ircmsg.find("#chrv") != -1:
     chrv()
 
