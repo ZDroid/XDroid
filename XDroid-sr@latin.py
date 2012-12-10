@@ -74,7 +74,7 @@ joinchan(channel) # Join the channel using the functions we previously defined
 
 while 1: # Be careful with these! it might send you to an infinite loop
   ircmsg = ircsock.recv(2048) # prima podatke sa servera
-  ircmsg = ircmsg.strip('\n\r') # sklanja nepotrebne line brejks.
+  ircmsg = ircmsg.strip('\n\r') # sklanja nepotrebne linijske preseke
   print(ircmsg) # Ovo je output sa servera!
 
   if ircmsg.find(":Hello "+ botnick) != -1: 
