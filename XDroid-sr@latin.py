@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 # Import some necessary libraries.
-import socket, time
+import socket, time, feedparser
 
 server = "irc.freenode.net" # Server
 channel = "#test" # Kanal
