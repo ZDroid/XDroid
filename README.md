@@ -5,3 +5,9 @@
 # How to help me with translations and testing?
 
 If you interested in translating or testing XDroid, contact me on **zdroid@zdroidblog.info**.
+
+# Notes
+
+You need feedparser for normal work of this bot.
+
+<b>feedparser</b> → http://code.google.com/p/feedparser/
