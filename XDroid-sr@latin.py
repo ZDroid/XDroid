@@ -16,7 +16,7 @@ def sendmsg(chan , msg): # Ovo je the funkcija slanja poruka, ona jednostavno š
 def joinchan(chan): # Ova funkcija se koristi za pridružavanje kanalima.
   ircsock.send("JOIN "+ chan +"\n")
 
-def hello(): # Ova funkcija odgovara korisniku koji unosi "Hello Mybot"
+def hello(): # Ova funkcija odgovara korisniku koji unosi „Hello Mybot“
   ircsock.send("PRIVMSG "+ channel +" :Hello!\n")
 
 def vreme():
