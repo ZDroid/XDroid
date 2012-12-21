@@ -1,22 +1,22 @@
 #/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-# Import some necessary libraries.
+# Uvozi neke neophodne biblioteke.
 import socket, time, feedparser
 
 server = "irc.freenode.net" # Server
 channel = "#test" # Kanal
 botnick = "testbot" # Naziv bota
-def ping(): # This is our first function! It will respond to server Pings.
+def ping(): # Ovo je naša prva funkcija! Ona će odgovoriti serverskim Ping-ovima.
   ircsock.send("PONG :pingis\n")
 
-def sendmsg(chan , msg): # This is the send message function, it simply sends messages to the channel.
+def sendmsg(chan , msg): # Ovo je the funkcija slanja poruka, ona jednostavno šalje poruke na kanal.
   ircsock.send("PRIVMSG "+ chan +" :"+ msg +"\n")
 
-def joinchan(chan): # This function is used to join channels.
+def joinchan(chan): # Ova funkcija se koristi za pridružavanje kanalima.
   ircsock.send("JOIN "+ chan +"\n")
 
-def hello(): # This function responds to a user that inputs "Hello Mybot"
+def hello(): # Ova funkcija odgovara korisniku koji unosi "Hello Mybot"
   ircsock.send("PRIVMSG "+ channel +" :Hello!\n")
 
 def vreme():
@@ -69,12 +69,12 @@ ircsock.connect((server, 6667))
 ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :Test bot\n")
 ircsock.send("NICK "+ botnick +"\n") 
 
-joinchan(channel) # Join the channel using the functions we previously defined
+joinchan(channel) # Pridruži se kanalu korišćenjem funkcija koje smo prethodno definisali
 
 
-while 1: # Be careful with these! it might send you to an infinite loop
-  ircmsg = ircsock.recv(2048) # prima podatke sa servera
-  ircmsg = ircmsg.strip('\n\r') # sklanja nepotrebne linijske preseke
+while 1: # Budite pažljivi sa ovim! To Vas može poslati u beskonačnu rutu
+  ircmsg = ircsock.recv(2048) # Prima podatke sa servera
+  ircmsg = ircmsg.strip('\n\r') # Sklanja nepotrebne linijske preseke
   print(ircmsg) # Ovo je output sa servera!
 
   if ircmsg.find(":Hello "+ botnick) != -1: 
@@ -108,16 +108,16 @@ while 1: # Be careful with these! it might send you to an infinite loop
   if ircmsg.find("#vreme") != -1:
     vreme()
 
-  if ircmsg.find("PING :") != -1: # if the server pings us then we've got to respond!
+  if ircmsg.find("PING :") != -1: # Ako server ping-uje nas onda moramo da odgovorimo!
     ping()
 
-  if ircmsg.find("!quit " + botnick) != -1: # if the server pings us then we've got to respond!
+  if ircmsg.find("!quit " + botnick) != -1: # Ako server ping-uje nas onda moramo da odgovorimo!
     try:
         ircsock.quit()
     except:
         print("Ode XDroid")
 
-  if ircmsg.find("!reconnect " + botnick) != -1: # if the server pings us then we've got to respond!
+  if ircmsg.find("!reconnect " + botnick) != -1: # Ako server ping-uje nas onda moramo da odgovorimo!
     try:
         ircsock.quit()
     except:
@@ -125,7 +125,7 @@ while 1: # Be careful with these! it might send you to an infinite loop
     
     ircsock.send("PRIVMSG "+ channel + " /quit")
     ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    ircsock.connect((server, 8001)) # Here we connect to the server using the port 6667
-    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :Test bot.\n")
-    ircsock.send("NICK "+ botnick +"\n") # here we actually assign the nick to the bot
-    joinchan(channel) # Join the channel using the functions we previously defined
+    ircsock.connect((server, 8001)) # Ovde se povezujemo na server korišćenjem porta 8001
+    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :XDroid \n")
+    ircsock.send("NICK "+ botnick +"\n") # Ovde ćemo stvarno dodeliti nick botu
+    joinchan(channel) # Pridruži se kanalu korišćenjem funkcija koje smo prethodno definisali
