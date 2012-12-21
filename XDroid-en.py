@@ -72,9 +72,9 @@ ircsock.send("NICK "+ botnick +"\n")
 joinchan(channel) # Join the channel using the functions we previously defined
 
 
-while 1: # Be careful with these! it might send you to an infinite loop
-  ircmsg = ircsock.recv(2048) # recieve data from server
-  ircmsg = ircmsg.strip('\n\r') # removes unnecessary line brakes
+while 1: # Be careful with these! It might send you to an infinite loop
+  ircmsg = ircsock.recv(2048) # Recieve data from server
+  ircmsg = ircmsg.strip('\n\r') # Removes unnecessary line brakes
   print(ircmsg) # This is output from server!
 
   if ircmsg.find(":Hello "+ botnick) != -1: 
@@ -108,16 +108,16 @@ while 1: # Be careful with these! it might send you to an infinite loop
   if ircmsg.find("#time") != -1:
     vreme()
 
-  if ircmsg.find("PING :") != -1: # if the server pings us then we've got to respond!
+  if ircmsg.find("PING :") != -1: # If the server pings us then we've got to respond!
     ping()
 
-  if ircmsg.find("!quit " + botnick) != -1: # if the server pings us then we've got to respond!
+  if ircmsg.find("!quit " + botnick) != -1: # If the server pings us then we've got to respond!
     try:
         ircsock.quit()
     except:
         print("XDroid leave")
 
-  if ircmsg.find("!reconnect " + botnick) != -1: # if the server pings us then we've got to respond!
+  if ircmsg.find("!reconnect " + botnick) != -1: # If the server pings us then we've got to respond!
     try:
         ircsock.quit()
     except:
@@ -127,5 +127,5 @@ while 1: # Be careful with these! it might send you to an infinite loop
     ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     ircsock.connect((server, 8001)) # Here we connect to the server using the port 6667
     ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :Test bot.\n")
-    ircsock.send("NICK "+ botnick +"\n") # here we actually assign the nick to the bot
+    ircsock.send("NICK "+ botnick +"\n") # Here we actually assign the nick to the bot
     joinchan(channel) # Join the channel using the functions we previously defined
