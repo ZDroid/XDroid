@@ -10,7 +10,7 @@ If you interested in translating or testing XDroid, contact me on **zdroid@zdroi
 
 # Notes
 
-You need feedparser for normal work of this bot.
+You need **`feedparser` python module** for normal work of this bot.
 
 <b>feedparser</b> → http://code.google.com/p/feedparser/
 
