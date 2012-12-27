@@ -14,4 +14,14 @@ You need **`feedparser` python module** for normal work of this bot.
 
 <b>feedparser</b> → http://code.google.com/p/feedparser/
 
-For running see [wiki pages] (https://github.com/ZDroid/XDroid/wiki).
+# Cloning
+
+```
+$ git clone git://github.com/ZDroid/XDroid
+```
+
+# Simple run
+
+```
+$ python /path/to/XDroid/XDroid.py
+```
