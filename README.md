@@ -14,6 +14,8 @@ You need **`feedparser` python module** for normal work of this bot.
 
 <b>feedparser</b> → http://code.google.com/p/feedparser/
 
+Bot tested on **irc.freenode.net** server.
+
 # Cloning
 
 ```
