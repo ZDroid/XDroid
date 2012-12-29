@@ -18,12 +18,12 @@ Bot tested on **irc.freenode.net** server.
 
 # Cloning
 
-```
+```shell
 $ git clone git://github.com/ZDroid/XDroid
 ```
 
 # Simple run
 
-```
+```shell
 $ python /path/to/XDroid/XDroid.py
 ```
