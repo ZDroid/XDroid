@@ -93,6 +93,9 @@ while 1: # Budite pažljivi sa ovim! To Vas može poslati u beskonačnu rutu
   elif ircmsg.find("#tux") != -1:
     tux()
 
+  elif ircmsg.find("#phone") != -1:
+    phone()
+
   elif ircmsg.find("#root") != -1:
     root()
 
