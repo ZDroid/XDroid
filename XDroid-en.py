@@ -6,7 +6,7 @@ import socket, time, feedparser
 
 server = "irc.freenode.net" # Server
 channel = "#test" # Channel
-botnick = "testbot" # Bot name
+botnick = "XDroid" # Bot name
 def ping(): # This is our first function! It will respond to server Pings.
   ircsock.send("PONG :pingis\n")
 
@@ -66,7 +66,7 @@ def phone():
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ircsock.connect((server, 6667)) 
-ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :Test bot\n")
+ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :#\n")
 ircsock.send("NICK "+ botnick +"\n") 
 
 joinchan(channel) # Join the channel using the functions we previously defined
@@ -129,6 +129,6 @@ while 1: # Be careful with these! It might send you to an infinite loop
     ircsock.send("PRIVMSG "+ channel + " /quit")
     ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     ircsock.connect((server, 8001)) # Here we connect to the server using the port 6667
-    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :Test bot.\n")
+    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :XDroid\n")
     ircsock.send("NICK "+ botnick +"\n") # Here we actually assign the nick to the bot
     joinchan(channel) # Join the channel using the functions we previously defined
