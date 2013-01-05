@@ -6,7 +6,7 @@ import socket, time, feedparser
 
 server = "irc.freenode.net" # Server
 channel = "#test" # Kanal
-botnick = "testbot" # Naziv bota
+botnick = "XDroid" # Naziv bota
 def ping(): # Ovo je naša prva funkcija! Ona će odgovoriti serverskim Ping-ovima.
   ircsock.send("PONG :pingis\n")
 
@@ -66,7 +66,7 @@ def phone():
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ircsock.connect((server, 6667)) 
-ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :Test bot\n")
+ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :#\n")
 ircsock.send("NICK "+ botnick +"\n") 
 
 joinchan(channel) # Pridruži se kanalu korišćenjem funkcija koje smo prethodno definisali
