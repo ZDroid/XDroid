@@ -12,18 +12,18 @@ If you interested in translating or testing XDroid, contact me on **zdroid@zdroi
 
 You need **`feedparser` python module** for normal work of this bot.
 
-<b>feedparser</b> → http://code.google.com/p/feedparser/
+**feedparser** → http://code.google.com/p/feedparser/
 
 Bot tested on **irc.freenode.net** server.
 
 # Cloning
 
-```shell
+```bash
 $ git clone git://github.com/ZDroid/XDroid
 ```
 
 # Simple run
 
-```shell
+```bash
 $ python /path/to/XDroid/XDroid.py
 ```
