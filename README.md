@@ -2,7 +2,7 @@
 
 **XDroid** is modern Python IRC bot with great options. It is aviable in two languages: Serbian latin (sr@latin) - **ORGINAL**, and English (en) - **TRANSLATION**.
 
-[**XDroid site**] (http://zdroid.github.com/XDroid/) is created with github pages.
+[**XDroid site**] (http://zdroid.github.com/XDroid/) is generated with GitHub pages.
 
 # How to contribute?
 
@@ -16,7 +16,7 @@ You need `feedparser` python module for normal work of this bot.
 
 Bot is tested on **irc.freenode.net** server.
 
-# Cloning
+# Cloning repo
 
 ```bash
 $ git clone git://github.com/ZDroid/XDroid
