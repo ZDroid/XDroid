@@ -1,45 +1,44 @@
 #/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-# Import some necessary libraries.
 import socket, time, feedparser
 
 server = "irc.freenode.net" # Server
-channel = "#test" # Channel
-botnick = "XDroid" # Bot name
-def ping(): # This is our first function! It will respond to server Pings.
+channel = "#botwar" # Kanal
+botnick = "XDroid" # Naziv bota
+def ping():
   ircsock.send("PONG :pingis\n")
 
-def sendmsg(chan , msg): # This is the send message function, it simply sends messages to the channel.
+def sendmsg(chan , msg):
   ircsock.send("PRIVMSG "+ chan +" :"+ msg +"\n")
 
-def joinchan(chan): # This function is used to join channels.
+def joinchan(chan):
   ircsock.send("JOIN "+ chan +"\n")
 
-def hello(): # This function responds to a user that inputs "Hello Mybot"
+def hello():
   ircsock.send("PRIVMSG "+ channel +" :Hello!\n")
 
-def time():
-  current_time = time.ctime()
-  ircsock.send("PRIVMSG "+ channel + " :It is true: " + current_time + "\n")
+def vreme():
+  trenutno_vreme = time.ctime()
+  ircsock.send("PRIVMSG "+ channel + " :Tačno je: " + trenutno_vreme + "\n")
 
-def place():
-  ircsock.send("PRIVMSG "+ channel + " :You are in Linux galaxy \n")
+def mesto():
+  ircsock.send("PRIVMSG "+ channel + " :Vi ste u GNU/Linux galaksiji \n")
 
 def chrv():
-  ircsock.send("PRIVMSG "+ channel + " :Latest version od Chrome/Chromium is 24 \n")
+  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Chrome-a/Chromium-a je 25 \n")
 
 def ffv():
-  ircsock.send("PRIVMSG "+ channel + " :Latest version of Firefox is 17.0 \n")
+  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Firefox-a je 19 \n")
 
 def ubuntuv():
-  ircsock.send("PRIVMSG "+ channel + " :Latest version of Ubuntu is 12.10 - Quantal Quetzal \n")
+  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Ubuntu-a je 12.10 - Quantal Quetzal \n")
 
 def slackv():
-  ircsock.send("PRIVMSG "+ channel + " :Latest version of Slackware is 14.0 \n")
+  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Slackware-a je 14.00 \n")
 
 def root():
-  ircsock.send("PRIVMSG "+ channel + " :Super Linux (and Unix) account \n")
+  ircsock.send("PRIVMSG "+ channel + " :Super Linux (i Unix) nalog \n")
 
 def tux():
   ircsock.send("PRIVMSG "+ channel + " :    .--. \n")
@@ -62,20 +61,20 @@ def phone():
   ircsock.send("PRIVMSG "+ channel + " :| 7   8   9 | \n")
   ircsock.send("PRIVMSG "+ channel + " :| *   0   # | \n")
   ircsock.send("PRIVMSG "+ channel + " :|           | \n")
-  ircsock.send("PRIVMSG "+ channel + " : ¯ ¯ ¯ ¯ ¯ ¯   \n")
+  ircsock.send("PRIVMSG "+ channel + " : ¯ ¯ ¯ ¯ ¯ ¯  \n")
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ircsock.connect((server, 6667)) 
 ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :#\n")
 ircsock.send("NICK "+ botnick +"\n") 
 
-joinchan(channel) # Join the channel using the functions we previously defined
+joinchan(channel)
 
 
-while 1: # Be careful with these! It might send you to an infinite loop
-  ircmsg = ircsock.recv(2048) # Recieve data from server
-  ircmsg = ircmsg.strip('\n\r') # Removes unnecessary line brakes
-  print(ircmsg) # This is output from server!
+while 1:
+  ircmsg = ircsock.recv(2048)
+  ircmsg = ircmsg.strip('\n\r')
+  print(ircmsg)
 
   if ircmsg.find(":Hello "+ botnick) != -1: 
     hello()
@@ -92,7 +91,7 @@ while 1: # Be careful with these! It might send you to an infinite loop
 
   elif ircmsg.find("#tux") != -1:
     tux()
-    
+
   elif ircmsg.find("#phone") != -1:
     phone()
 
@@ -105,22 +104,22 @@ while 1: # Be careful with these! It might send you to an infinite loop
   elif ircmsg.find("#ffv") != -1:
     ffv()
 
-  elif ircmsg.find("#place") != -1:
+  elif ircmsg.find("#mesto") != -1:
     mesto()
 
-  if ircmsg.find("#time") != -1:
+  if ircmsg.find("#vreme") != -1:
     vreme()
 
-  if ircmsg.find("PING :") != -1: # If the server pings us then we've got to respond!
+  if ircmsg.find("PING :") != -1:
     ping()
 
-  if ircmsg.find("!quit " + botnick) != -1: # If the server pings us then we've got to respond!
+  if ircmsg.find("!quit " + botnick) != -1:
     try:
         ircsock.quit()
     except:
-        print("XDroid leave")
+        print("Ode XDroid")
 
-  if ircmsg.find("!reconnect " + botnick) != -1: # If the server pings us then we've got to respond!
+  if ircmsg.find("!reconnect " + botnick) != -1:
     try:
         ircsock.quit()
     except:
@@ -128,7 +127,7 @@ while 1: # Be careful with these! It might send you to an infinite loop
     
     ircsock.send("PRIVMSG "+ channel + " /quit")
     ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    ircsock.connect((server, 8001)) # Here we connect to the server using the port 6667
-    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :XDroid\n")
-    ircsock.send("NICK "+ botnick +"\n") # Here we actually assign the nick to the bot
-    joinchan(channel) # Join the channel using the functions we previously defined
+    ircsock.connect((server, 8001))
+    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :XDroid \n")
+    ircsock.send("NICK "+ botnick +"\n")
+    joinchan(channel)

@@ -1,45 +1,44 @@
 #/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-# Uvozi neke neophodne biblioteke.
 import socket, time, feedparser
 
 server = "irc.freenode.net" # Server
-channel = "#test" # Kanal
-botnick = "XDroid" # Naziv bota
-def ping(): # Ovo je naša prva funkcija! Ona će odgovoriti serverskim Ping-ovima.
+channel = "#botwar" # Channel
+botnick = "XDroid" # Bot name
+def ping():
   ircsock.send("PONG :pingis\n")
 
-def sendmsg(chan , msg): # Ovo je the funkcija slanja poruka, ona jednostavno šalje poruke na kanal.
+def sendmsg(chan , msg):
   ircsock.send("PRIVMSG "+ chan +" :"+ msg +"\n")
 
-def joinchan(chan): # Ova funkcija se koristi za pridružavanje kanalima.
+def joinchan(chan):
   ircsock.send("JOIN "+ chan +"\n")
 
-def hello(): # Ova funkcija odgovara korisniku koji unosi „Hello Mybot“
+def hello():
   ircsock.send("PRIVMSG "+ channel +" :Hello!\n")
 
-def vreme():
-  trenutno_vreme = time.ctime()
-  ircsock.send("PRIVMSG "+ channel + " :Tačno je: " + trenutno_vreme + "\n")
+def time():
+  current_time = time.ctime()
+  ircsock.send("PRIVMSG "+ channel + " :It's true: " + current_time + "\n")
 
-def mesto():
-  ircsock.send("PRIVMSG "+ channel + " :Vi ste u Linux galaksiji \n")
+def place():
+  ircsock.send("PRIVMSG "+ channel + " :You are in GNU/Linux galaxy \n")
 
 def chrv():
-  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Chroma/Chromiuma je 24 \n")
+  ircsock.send("PRIVMSG "+ channel + " :Latest version od Chrome/Chromium is 25 \n")
 
 def ffv():
-  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Firefoxa je 17.0 \n")
+  ircsock.send("PRIVMSG "+ channel + " :Latest version of Firefox is 19 \n")
 
 def ubuntuv():
-  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Ubuntu-a je 12.10 - Quantal Quetzal \n")
+  ircsock.send("PRIVMSG "+ channel + " :Latest version of Ubuntu is 12.10 - Quantal Quetzal \n")
 
 def slackv():
-  ircsock.send("PRIVMSG "+ channel + " :Poslednja verzija Slackware-a je 14.0 \n")
+  ircsock.send("PRIVMSG "+ channel + " :Latest version of Slackware is 14.00 \n")
 
 def root():
-  ircsock.send("PRIVMSG "+ channel + " :Super Linux (i Unix) nalog \n")
+  ircsock.send("PRIVMSG "+ channel + " :Super Linux (and Unix) account \n")
 
 def tux():
   ircsock.send("PRIVMSG "+ channel + " :    .--. \n")
@@ -69,13 +68,13 @@ ircsock.connect((server, 6667))
 ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :#\n")
 ircsock.send("NICK "+ botnick +"\n") 
 
-joinchan(channel) # Pridruži se kanalu korišćenjem funkcija koje smo prethodno definisali
+joinchan(channel)
 
 
-while 1: # Budite pažljivi sa ovim! To Vas može poslati u beskonačnu rutu
-  ircmsg = ircsock.recv(2048) # Prima podatke sa servera
-  ircmsg = ircmsg.strip('\n\r') # Sklanja nepotrebne linijske preseke
-  print(ircmsg) # Ovo je output sa servera!
+while 1:
+  ircmsg = ircsock.recv(2048)
+  ircmsg = ircmsg.strip('\n\r')
+  print(ircmsg)
 
   if ircmsg.find(":Hello "+ botnick) != -1: 
     hello()
@@ -92,7 +91,7 @@ while 1: # Budite pažljivi sa ovim! To Vas može poslati u beskonačnu rutu
 
   elif ircmsg.find("#tux") != -1:
     tux()
-
+    
   elif ircmsg.find("#phone") != -1:
     phone()
 
@@ -105,22 +104,22 @@ while 1: # Budite pažljivi sa ovim! To Vas može poslati u beskonačnu rutu
   elif ircmsg.find("#ffv") != -1:
     ffv()
 
-  elif ircmsg.find("#mesto") != -1:
+  elif ircmsg.find("#place") != -1:
     mesto()
 
-  if ircmsg.find("#vreme") != -1:
+  if ircmsg.find("#time") != -1:
     vreme()
 
-  if ircmsg.find("PING :") != -1: # Ako server ping-uje nas onda moramo da odgovorimo!
+  if ircmsg.find("PING :") != -1:
     ping()
 
-  if ircmsg.find("!quit " + botnick) != -1: # Ako server ping-uje nas onda moramo da odgovorimo!
+  if ircmsg.find("!quit " + botnick) != -1:
     try:
         ircsock.quit()
     except:
-        print("Ode XDroid")
+        print("XDroid left")
 
-  if ircmsg.find("!reconnect " + botnick) != -1: # Ako server ping-uje nas onda moramo da odgovorimo!
+  if ircmsg.find("!reconnect " + botnick) != -1:
     try:
         ircsock.quit()
     except:
@@ -128,7 +127,7 @@ while 1: # Budite pažljivi sa ovim! To Vas može poslati u beskonačnu rutu
     
     ircsock.send("PRIVMSG "+ channel + " /quit")
     ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    ircsock.connect((server, 8001)) # Ovde se povezujemo na server korišćenjem porta 8001
-    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :XDroid \n")
-    ircsock.send("NICK "+ botnick +"\n") # Ovde ćemo stvarno dodeliti nick botu
-    joinchan(channel) # Pridruži se kanalu korišćenjem funkcija koje smo prethodno definisali
+    ircsock.connect((server, 8001))
+    ircsock.send("USER "+ botnick +" "+ botnick +" "+ botnick +" :XDroid\n")
+    ircsock.send("NICK "+ botnick +"\n")
+    joinchan(channel)
