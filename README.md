@@ -1,33 +1,32 @@
-# What is XDroid?
+XDroid
+======
 
-**XDroid** is modern Python IRC bot with great options.
+**XDroid** is modern Python IRC bot.
 
-It is originaly published on Serbian, but translated to English later. Currently all translated files are in `XDroid-lang.py` form. For future is porting translations to **po**.
-
-[**XDroid site**] (http://zdroid.github.com/XDroid/) is generated with GitHub pages.
-
-# How to contribute?
-
-If you interested in translating or you want to suggest something for XDroid, contact me on **zdroid@zdroidblog.info**.
-
-You can use [issues](https://github.com/ZDroid/XDroid/issues).
-
-# Notes
-
-You need `feedparser` python module for normal work of this bot.
-
-**feedparser** → http://code.google.com/p/feedparser/
+You just need [feedparser](http://code.google.com/p/feedparser/) installed and all will work well.
 
 Bot is tested on **irc.freenode.net** server.
 
-# Cloning repo
+Translations is in **tx/**. Science version is in **science/**.
+
+Contibuting
+-----------
+
+For all suggestions and problems contact me on **zdroid at zdroidblog dot info**
+
+Start
+-----
 
 ```bash
 $ git clone git@github.com:ZDroid/XDroid
+$ cd XDroid
+$ chmod +x XDroid.py
+$ ./XDroid.py
 ```
 
-# Simple run
+Author
+------
 
-```bash
-$ python /path/to/XDroid/XDroid.py
-```
+**Zlatan Vasović**
+* https://twitter.com/ZXeDroid
+* https://github.com/ZDroid
