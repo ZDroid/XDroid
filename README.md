@@ -1,32 +1,27 @@
-XDroid
-======
+# XDroid
 
-**XDroid** is modern Python IRC bot.
+**XDroid** is the most stupid IRC bot.
 
 You just need [feedparser](http://code.google.com/p/feedparser/) installed and all will work well.
 
-Bot is tested on **irc.freenode.net** server.
+Don't look in `lab/` (or do that).
 
-Translations is in **tx/**. Science version is in **science/**.
+Licensed under the terms of MIT license.
 
-Contibuting
------------
+# Usage
 
-For all suggestions and problems contact me on **zdroid at zdroidblog dot info**
-
-Start
------
-
+Run:
 ```bash
-$ git clone git@github.com:ZDroid/XDroid
-$ cd XDroid
-$ chmod +x XDroid.py
 $ ./XDroid.py
 ```
 
-Author
-------
+Variables that you should change in `XDroid.py`:
+* `server` - IRC server
+* `channel` - IRC channel
+* `botnick` - nick
+
+# Author
 
 **Zlatan Vasović**
-* https://twitter.com/ZXeDroid
+* https://twitter.com/zdr0id
 * https://github.com/ZDroid
