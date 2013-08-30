@@ -4,8 +4,6 @@
 
 You just need [feedparser](http://code.google.com/p/feedparser/) installed and all will work well.
 
-Don't look in `lab/` (or do that).
-
 Licensed under the terms of MIT license.
 
 # Usage
@@ -16,9 +14,9 @@ $ ./XDroid.py
 ```
 
 Variables that you should change in `XDroid.py`:
-* `server` - IRC server
-* `channel` - IRC channel
-* `botnick` - nick
+* `server`
+* `channel`
+* `botnick`
 
 # Author
 
