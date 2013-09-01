@@ -13,7 +13,7 @@ import feedparser
 # Config
 # ------
 
-server  = "irc.freenode.net" # Server
+server = "irc.freenode.net" # Server
 channel = "#zdroid" # Channel
 botnick = "XDroid" # Bot's name
 
@@ -21,12 +21,10 @@ botnick = "XDroid" # Bot's name
 # ----------------------
 
 # Send message to the channel
-
 def sendmsg(chan, msg):
   irc.send("PRIVMSG "+ chan +" :"+ msg +"\n")
 
 # Join the channel
-
 def joinchan(chan):
   irc.send("JOIN "+ chan +"\n")
 
