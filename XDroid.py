@@ -7,7 +7,6 @@
 
 import socket
 import time
-from math import pi
 import feedparser
 
 # Config
