@@ -11,10 +11,10 @@ Run:
 $ ./XDroid.py
 ```
 
-Variables that you should change in `XDroid.py`:
+Variables you should change in `XDroid.py`:
 * `server`
 * `channel`
-* `botnick`
+* `nick`
 
 # Author
 
