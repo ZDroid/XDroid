@@ -1,22 +1,20 @@
 # XDroid
 
-**XDroid** is the most stupid IRC bot. You just need [feedparser](http://code.google.com/p/feedparser/) installed and all will work well.
+**XDroid** is the most stupid IRC bot. Requires
+[feedparser](http://code.google.com/p/feedparser/).
 
 Licensed under the terms of MIT license.
 
-# Usage
+## Usage
 
-Run:
-```bash
-$ ./XDroid.py
-```
+Run: `./XDroid.py`
 
 Variables you should change in `XDroid.py`:
 * `server`
 * `channel`
 * `nick`
 
-# Author
+## Author
 
 **Zlatan Vasović**
 * https://twitter.com/zdr0id
