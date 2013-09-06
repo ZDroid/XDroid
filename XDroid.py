@@ -12,9 +12,9 @@ import feedparser
 # Config
 # ------
 
-server = "irc.freenode.net" # Server
-channel = "#zdroid" # Channel
-nick = "XDroid" # Bot's name
+server = "irc.freenode.net"
+channel = "#zdroid"
+nick = "XDroid"
 
 # Connect to server
 # -----------------
@@ -48,6 +48,9 @@ while 1:
   if msg.find("+pi") != -1:
     irc.send("PRIVMSG " + channel + " :3.14159265359\n")
 
+  if msg.find("+nuke") != -1:
+    irc.send("NOTICE " + channel + " :Nuclear bomb is falling down!\n")
+
   if msg.find("+tux") != -1:
     irc.send("PRIVMSG " + channel + " :    .--.\n")
     irc.send("PRIVMSG " + channel + " :   |o o |\n")
@@ -60,7 +63,7 @@ while 1:
   if msg.find("+verge") != -1:
     url = "http://theverge.com/rss/index.xml"
     feed = feedparser.parse(url)
-    for i in range(1,6):
+    for i in range(1, 6):
       news = feed["items"][i].link
       irc.send("PRIVMSG " + channel + " :The Verge ~ " + news + "\n")
 
