@@ -63,7 +63,7 @@ while 1:
   if msg.find("+verge") != -1:
     url = "http://theverge.com/rss/index.xml"
     feed = feedparser.parse(url)
-    for i in range(1, 6):
+    for i in range(1,6):
       news = feed["items"][i].link
       irc.send("PRIVMSG " + channel + " :The Verge ~ " + news + "\n")
 
