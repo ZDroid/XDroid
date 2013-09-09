@@ -16,13 +16,13 @@ Variables you should change in `XDroid.py`:
 
 ## Functions
 
-* **+hello** - say hello
+* **+hello** - just say hello
 * **+time** - print current time
 * **+place** - I don't know
 * **+pi** - print Pi's value
 * **+nuke** - example notice
-* **+tux** - print tux ASCII art
-* **+verge** - example RSS function
+* **+tux** - print tux drawn in ASCII
+* **+verge** - example function for parsing RSS feed
 * **+rcn** - reconnect the bot
 
 ## Author
