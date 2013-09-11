@@ -29,8 +29,7 @@ irc.send("JOIN " + channel + "\n")
 # ----------------
 
 while 1:
-  msg = irc.recv(2048)
-  msg = msg.strip("\n\r")
+  msg = irc.recv(2048).strip("\n\r")
   print(msg)
 
   if msg.find("PING :") != -1:
@@ -62,10 +61,9 @@ while 1:
 
   if msg.find("+verge") != -1:
     url = "http://theverge.com/rss/index.xml"
-    feed = feedparser.parse(url)
     for i in range(1,6):
-      news = feed["items"][i].link
-      irc.send("PRIVMSG " + channel + " :The Verge ~ " + news + "\n")
+      irc.send("PRIVMSG " + channel + " :The Verge ~ " +
+               feedparser.parse(url)["items"][i].link + "\n")
 
   if msg.find("+rcn") != -1:
     irc.send("PRIVMSG " + channel + " /quit")
