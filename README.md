@@ -7,12 +7,13 @@ Licensed under the terms of MIT license.
 
 ## Usage
 
-Run: `./XDroid.py`
-
 Variables you should change in `XDroid.py`:
-* `server`
-* `channel`
-* `nick`
+* `server` (L15)
+* `channel` (L16)
+* `nick` (L17)
+* `url` (L63)
+
+Run: `$ ./XDroid.py`
 
 ## Functions
 
