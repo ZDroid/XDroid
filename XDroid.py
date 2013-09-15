@@ -57,12 +57,12 @@ while 1:
     irc.send("PRIVMSG " + channel + " :  //   \ \ \n")
     irc.send("PRIVMSG " + channel + " : (|     | )\n")
     irc.send("PRIVMSG " + channel + " :/'\     /'\ \n")
-    irc.send("PRIVMSG " + channel + " :\___)=(___/\n")
+    irc.send("PRIVMSG " + channel + " :\___)-(___/\n")
 
   if msg.find("+verge") != -1:
     url = "http://theverge.com/rss/index.xml"
     for i in range(1,6):
-      irc.send("PRIVMSG " + channel + " :The Verge ~ " +
+      irc.send("PRIVMSG " + channel + " :The Verge > " +
                feedparser.parse(url)["items"][i].link + "\n")
 
   if msg.find("+rcn") != -1:
