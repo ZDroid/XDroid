@@ -42,7 +42,7 @@ while 1:
     irc.send("PRIVMSG " + channel + " :It's " + ctime() + "\n")
 
   if msg.find("+place") != -1:
-    irc.send("PRIVMSG " + channel + " :Droid land\n")
+    irc.send("PRIVMSG " + channel + " :" + channel + "\n")
 
   if msg.find("+pi") != -1:
     irc.send("PRIVMSG " + channel + " :3.14159265359\n")
@@ -59,10 +59,11 @@ while 1:
     irc.send("PRIVMSG " + channel + " :/'\     /'\ \n")
     irc.send("PRIVMSG " + channel + " :\___)-(___/\n")
 
-  if msg.find("+verge") != -1:
+  if msg.find("+rss") != -1:
     url = "http://theverge.com/rss/index.xml"
     for i in range(1,6):
-      irc.send("PRIVMSG " + channel + " :The Verge > " +
+      irc.send("PRIVMSG " + channel + " :" +
+               feedparser.parse(url)["items"][i].title + " > " +
                feedparser.parse(url)["items"][i].link + "\n")
 
   if msg.find("+rcn") != -1:

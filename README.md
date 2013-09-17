@@ -8,6 +8,7 @@ Licensed under the terms of MIT license.
 ## Usage
 
 Variables you should change in `XDroid.py`:
+
 * `server` (L15)
 * `channel` (L16)
 * `nick` (L17)
@@ -19,15 +20,16 @@ Run: `$ ./XDroid.py`
 
 * **+hello** - just say hello
 * **+time** - print current time
-* **+place** - I don't know
-* **+pi** - print Pi's value
-* **+nuke** - example notice
+* **+place** - print name of channel
+* **+pi** - print pi value
+* **+nuke** - throw off nuclear notice
 * **+tux** - print tux drawn in ASCII
-* **+verge** - example function for parsing RSS feed
+* **+rss** - RSS parsing function
 * **+rcn** - reconnect the bot
 
 ## Author
 
 **Zlatan Vasović**
+
 * https://twitter.com/zdr0id
 * https://github.com/ZDroid
