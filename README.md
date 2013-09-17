@@ -18,13 +18,13 @@ Run: `$ ./XDroid.py`
 
 ## Functions
 
-* **+hello** - just say hello
+* **+hello** - just say *hello*
 * **+time** - print current time
 * **+place** - print name of channel
 * **+pi** - print pi value
 * **+nuke** - throw off nuclear notice
-* **+tux** - print tux drawn in ASCII
-* **+rss** - RSS parsing function
+* **+tux** - print tux ASCII drawing
+* **+rss** - RSS parse function
 * **+rcn** - reconnect the bot
 
 ## Author
