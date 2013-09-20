@@ -1,11 +1,28 @@
 # XDroid
 
-**XDroid** is the most stupid IRC bot. Requires
+**XDroid** is the most stupid IRC bot. He uses
 [feedparser](http://code.google.com/p/feedparser/).
 
 Licensed under the terms of MIT license.
 
 ## Usage
+
+```bash
+$ ./XDroid.py
+```
+
+## Functions
+
+* **+hi** — just say *hi!*
+* **+time** — display current time
+* **+place** — display name of channel
+* **+pi** — print pi value
+* **+note** — throw off notice
+* **+tux** — draw Tux
+* **+rss** — parse RSS
+* **+rcn** — reconnect the bot
+
+## Customization
 
 Variables you should change in `XDroid.py`:
 
@@ -14,18 +31,7 @@ Variables you should change in `XDroid.py`:
 * `nick` (L17)
 * `url` (L63)
 
-Run: `$ ./XDroid.py`
-
-## Functions
-
-* **+hello** - just say *hello*
-* **+time** - print current time
-* **+place** - print name of channel
-* **+pi** - print pi value
-* **+nuke** - throw off nuclear notice
-* **+tux** - print tux ASCII drawing
-* **+rss** - RSS parse function
-* **+rcn** - reconnect the bot
+To change notice text, edit L51.
 
 ## Author
 

@@ -35,8 +35,8 @@ while 1:
   if msg.find("PING :") != -1:
     irc.send("PONG :pingis\n")
 
-  if msg.find("+hello") != -1:
-    irc.send("PRIVMSG " + channel + " :Hello guys!\n")
+  if msg.find("+hi") != -1:
+    irc.send("PRIVMSG " + channel + " :Hi!\n")
 
   if msg.find("+time") != -1:
     irc.send("PRIVMSG " + channel + " :It's " + ctime() + "\n")
@@ -47,7 +47,7 @@ while 1:
   if msg.find("+pi") != -1:
     irc.send("PRIVMSG " + channel + " :3.14159265359\n")
 
-  if msg.find("+nuke") != -1:
+  if msg.find("+note") != -1:
     irc.send("NOTICE " + channel + " :Nuclear bomb is falling down!\n")
 
   if msg.find("+tux") != -1:
@@ -56,14 +56,14 @@ while 1:
     irc.send("PRIVMSG " + channel + " :   |:_/ |\n")
     irc.send("PRIVMSG " + channel + " :  //   \ \ \n")
     irc.send("PRIVMSG " + channel + " : (|     | )\n")
-    irc.send("PRIVMSG " + channel + " :/'\     /'\ \n")
+    irc.send("PRIVMSG " + channel + " :/^\     /^\ \n")
     irc.send("PRIVMSG " + channel + " :\___)-(___/\n")
 
   if msg.find("+rss") != -1:
     url = "http://theverge.com/rss/index.xml"
     for i in range(1,6):
       irc.send("PRIVMSG " + channel + " :" +
-               feedparser.parse(url)["items"][i].title + " > " +
+               feedparser.parse(url)["items"][i].title + " " +
                feedparser.parse(url)["items"][i].link + "\n")
 
   if msg.find("+rcn") != -1:
