@@ -61,7 +61,7 @@ while 1:
 
   if msg.find("+rss") != -1:
     url = "http://theverge.com/rss/index.xml"
-    for i in range(1,6):
+    for i in range(1, 6):
       irc.send("PRIVMSG " + channel + " :" +
                feedparser.parse(url)["items"][i].title + " " +
                feedparser.parse(url)["items"][i].link + "\n")

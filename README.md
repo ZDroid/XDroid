@@ -33,6 +33,8 @@ Variables you should change in `XDroid.py`:
 
 To change notice text, edit L51.
 
+To change range of parsed RSS feed items, edit `range(...)` at L64.
+
 ## Author
 
 **Zlatan Vasović**
