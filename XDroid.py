@@ -39,7 +39,7 @@ while 1:
     irc.send("PRIVMSG " + channel + " :Hi!\n")
 
   if msg.find("+time") != -1:
-    irc.send("PRIVMSG " + channel + " :It's " + ctime() + "\n")
+    irc.send("PRIVMSG " + channel + " :" + ctime() + "\n")
 
   if msg.find("+place") != -1:
     irc.send("PRIVMSG " + channel + " :" + channel + "\n")
@@ -66,8 +66,12 @@ while 1:
                feedparser.parse(url)["items"][i].title + " " +
                feedparser.parse(url)["items"][i].link + "\n")
 
+  if msg.find("+die") != -1:
+    irc.send("QUIT\n")
+    exit()
+
   if msg.find("+rcn") != -1:
-    irc.send("PRIVMSG " + channel + " /quit")
+    irc.send("QUIT\n")
     irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     irc.connect((server, 6667))
     irc.send("USER " + nick + " " + nick + " " + nick + " :$\n")

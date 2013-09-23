@@ -20,6 +20,7 @@ $ ./XDroid.py
 * **+note** — throw off notice
 * **+tux** — draw Tux
 * **+rss** — parse RSS
+* **+die** — kill the bot and exit from Python session
 * **+rcn** — reconnect the bot
 
 ## Customization
