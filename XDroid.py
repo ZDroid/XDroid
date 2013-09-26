@@ -21,7 +21,7 @@ nick = "XDroid"
 
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 irc.connect((server, 6667))
-irc.send("USER " + nick + " " + nick + " " + nick + " :$\n")
+irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK " + nick + "\n")
 irc.send("JOIN " + channel + "\n")
 
@@ -41,14 +41,14 @@ while 1:
   if msg.find("+time") != -1:
     irc.send("PRIVMSG " + channel + " :" + ctime() + "\n")
 
-  if msg.find("+place") != -1:
+  if msg.find("+channel") != -1:
     irc.send("PRIVMSG " + channel + " :" + channel + "\n")
 
   if msg.find("+pi") != -1:
     irc.send("PRIVMSG " + channel + " :3.14159265359\n")
 
   if msg.find("+note") != -1:
-    irc.send("NOTICE " + channel + " :Nuclear bomb is falling down!\n")
+    irc.send("NOTICE " + channel + " :Nuclear bomb will explode!\n")
 
   if msg.find("+tux") != -1:
     irc.send("PRIVMSG " + channel + " :    .--.\n")

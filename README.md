@@ -15,7 +15,7 @@ $ ./XDroid.py
 
 * **+hi** — just say *hi!*
 * **+time** — display current time
-* **+place** — display name of channel
+* **+channel** — display name of channel
 * **+pi** — print pi value
 * **+note** — throw off notice
 * **+tux** — draw Tux
