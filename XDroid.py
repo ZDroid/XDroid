@@ -74,6 +74,6 @@ while 1:
     irc.send("QUIT\n")
     irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     irc.connect((server, 6667))
-    irc.send("USER " + nick + " " + nick + " " + nick + " :$\n")
+    irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
     irc.send("NICK " + nick + "\n")
     irc.send("JOIN " + channel + "\n")
