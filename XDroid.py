@@ -59,9 +59,9 @@ while 1:
     irc.send("PRIVMSG " + channel + " :/^\     /^\ \n")
     irc.send("PRIVMSG " + channel + " :\___)-(___/\n")
 
-  if msg.find("+rss") != -1:
-    url = "http://theverge.com/rss/index.xml"
-    for i in range(1, 6):
+  if msg.find("+feed") != -1:
+    url = "http://zdroid.roon.io/feed"
+    for i in range(1, 5):
       irc.send("PRIVMSG " + channel + " :" +
                feedparser.parse(url)["items"][i].title + " " +
                feedparser.parse(url)["items"][i].link + "\n")

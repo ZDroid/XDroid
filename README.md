@@ -11,6 +11,8 @@ Licensed under the terms of MIT license.
 $ ./XDroid.py
 ```
 
+Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
+
 ## Functions
 
 * **+hi** — just say *hi!*
@@ -19,7 +21,7 @@ $ ./XDroid.py
 * **+pi** — print pi value
 * **+note** — throw off notice
 * **+tux** — draw Tux
-* **+rss** — parse RSS
+* **+feed** — parse an Atom or RSS feed
 * **+die** — kill the bot and exit from Python session
 * **+rcn** — reconnect the bot
 
@@ -34,7 +36,7 @@ Variables you should change in `XDroid.py`:
 
 To change notice text, edit L51.
 
-To change range of parsed RSS feed items, edit `range(...)` at L64.
+To change range of parsed feed items, edit `range(...)` at L64.
 
 ## Author
 
