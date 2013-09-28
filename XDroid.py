@@ -9,8 +9,8 @@ import socket
 from time import ctime
 import feedparser
 
-# Config
-# ------
+# Configuration
+# -------------
 
 server = "irc.freenode.net"
 channel = "#zdroid"
