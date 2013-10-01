@@ -22,7 +22,7 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
 * **+note** — throw off notice
 * **+tux** — draw Tux
 * **+feed** — parse an Atom or RSS feed
-* **+die** — kill the bot and exit from Python session
+* **+quit** — kill the bot and exit from Python session
 * **+rcn** — reconnect the bot
 
 ## Customization
@@ -36,7 +36,7 @@ Variables you should change in `XDroid.py`:
 
 To change notice text, edit L51.
 
-To change range of parsed feed items, edit `range(...)` at L64.
+To change range of parsed feed items, change `n` in `range(1, n)` at L64.
 
 ## Author
 

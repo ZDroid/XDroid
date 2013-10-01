@@ -66,7 +66,7 @@ while 1:
                feedparser.parse(url)["items"][i].title + " " +
                feedparser.parse(url)["items"][i].link + "\n")
 
-  if msg.find("+die") != -1:
+  if msg.find("+quit") != -1:
     irc.send("QUIT\n")
     exit()
 
