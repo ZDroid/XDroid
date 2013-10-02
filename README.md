@@ -15,6 +15,8 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
 
 ## Functions
 
+All functions are starting with `+` to avoid conflicts with other IRC bots and services.
+
 * **+hi** — just say *hi!*
 * **+time** — display current time
 * **+channel** — display name of channel
@@ -34,7 +36,7 @@ Variables you should change in `XDroid.py`:
 * `nick` (L17)
 * `url` (L63)
 
-To change notice text, edit L51.
+To change notice (**+note**) text, edit L51.
 
 To change range of parsed feed items, change `n` in `range(1, n)` at L64.
 
