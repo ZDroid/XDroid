@@ -24,7 +24,7 @@ services.
 * **+pi** — print pi value
 * **+note** — throw off notice
 * **+tux** — draw Tux
-* **+feed** — parse an Atom or RSS feed
+* **+feed** — display Atom or RSS feed items
 * **+quit** — kill the bot and exit from Python session
 * **+rcn** — reconnect the bot
 
