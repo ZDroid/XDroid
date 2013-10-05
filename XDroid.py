@@ -22,8 +22,8 @@ nick = "XDroid"
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 irc.connect((server, 6667))
 irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
-irc.send("NICK " + nick + "\n")
-irc.send("JOIN " + channel + "\n")
+irc.send("NICK :" + nick + "\n")
+irc.send("JOIN :" + channel + "\n")
 
 # Stupid functions
 # ----------------
@@ -75,5 +75,5 @@ while 1:
     irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     irc.connect((server, 6667))
     irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
-    irc.send("NICK " + nick + "\n")
-    irc.send("JOIN " + channel + "\n")
+    irc.send("NICK :" + nick + "\n")
+    irc.send("JOIN :" + channel + "\n")
