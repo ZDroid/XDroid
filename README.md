@@ -18,14 +18,14 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
 All function names start with `+` to avoid conflicts with other IRC bots and
 services.
 
-* **+hi** — just say *Hi!*
+* **+hi** — say *Hi!*
 * **+time** — display current time
 * **+channel** — display name of channel
 * **+pi** — print pi value
 * **+note** — throw off notice
 * **+tux** — draw Tux
 * **+feed** — display Atom or RSS feed items
-* **+quit** — kill the bot and exit from Python session
+* **+quit** — kill the bot and exit from the Python session
 * **+rcn** — reconnect the bot
 
 ## Customization
