@@ -13,9 +13,9 @@ $ ./XDroid.py
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
 
-## Functions
+## Commands
 
-All function names start with `+` to avoid conflicts with other IRC bots and
+All commands start with `+` to avoid conflicts with other IRC bots and
 services.
 
 * **+hi** — say *Hi!*

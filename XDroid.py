@@ -25,8 +25,8 @@ irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
 irc.send("JOIN :" + channel + "\n")
 
-# Stupid functions
-# ----------------
+# Stupid commands
+# ---------------
 
 while 1:
   msg = irc.recv(2048).strip("\n\r")
