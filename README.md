@@ -22,7 +22,7 @@ services.
 * **+time** — display current time
 * **+channel** — display name of channel
 * **+pi** — print pi value
-* **+note** — throw off notice
+* **+note** — display notice
 * **+tux** — draw Tux
 * **+feed** — display Atom or RSS feed items
 * **+quit** — kill the bot and exit from the Python session
