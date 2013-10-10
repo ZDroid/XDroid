@@ -39,6 +39,9 @@ Variables you should change in `XDroid.py`:
 
 To change range of parsed feed items, change `n` in `range(1, n)` at L64.
 
+Don't change 35 and L36 because of they aren't for command, they are for ping
+replies.
+
 ## Author
 
 **Zlatan Vasović**
