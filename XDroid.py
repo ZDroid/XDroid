@@ -48,7 +48,7 @@ while 1:
     irc.send("PRIVMSG " + channel + " :3.14159265359\n")
 
   if msg.find("+note") != -1:
-    irc.send("NOTICE " + channel + " :Apocalypse is today.\n")
+    irc.send("NOTICE " + channel + " :An error happened.\n")
 
   if msg.find("+tux") != -1:
     irc.send("PRIVMSG " + channel + " :    .--.\n")
