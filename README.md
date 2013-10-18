@@ -25,8 +25,8 @@ services.
 * **+note** — display notice
 * **+tux** — draw Tux
 * **+feed** — display Atom or RSS feed items
-* **+quit** — kill the bot and exit from the Python session
-* **+rcn** — reconnect the bot
+* **+quit** — kill bot and exit from Python session
+* **+rcn** — reconnect bot
 
 ## Customization
 
