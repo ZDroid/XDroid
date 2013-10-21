@@ -48,7 +48,7 @@ while 1:
     irc.send("PRIVMSG " + channel + " :Pi value is 3.14159265359.\n")
 
   if msg.find("+note") != -1:
-    irc.send("NOTICE " + channel + " :An error happened.\n")
+    irc.send("NOTICE " + channel + " :Something failed. Sorry.\n")
 
   if msg.find("+tux") != -1:
     irc.send("PRIVMSG " + channel + " :    .--.\n")
