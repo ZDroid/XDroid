@@ -1,6 +1,6 @@
 # XDroid
 
-**XDroid** is the most stupid IRC bot. He uses
+**XDroid** is a potentially good IRC bot. He uses
 [feedparser](http://code.google.com/p/feedparser/).
 
 Licensed under the terms of MIT license.
@@ -39,8 +39,7 @@ Variables you should change in `XDroid.py`:
 
 To change range of parsed feed items, edit `n` in `range(1, n)` at L64.
 
-Don't change L35 and L36 because of they aren't for any command, they are for
-ping replies.
+Don't change L35 and L36 because of they are for ping replies.
 
 ## Author
 
