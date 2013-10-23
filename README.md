@@ -21,7 +21,7 @@ services.
 * **+hi** — say *Hi!*
 * **+time** — display current time
 * **+channel** — display name of channel
-* **+pi** — print pi value
+* **+pi** — display pi value
 * **+note** — display notice
 * **+tux** — draw Tux
 * **+feed** — display Atom or RSS feed items
