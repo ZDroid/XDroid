@@ -45,7 +45,7 @@ while 1:
     irc.send("PRIVMSG " + channel + " :We're on " + channel + ".\n")
 
   if msg.find("+pi") != -1:
-    irc.send("PRIVMSG " + channel + " :Pi value is 3.14159265359.\n")
+    irc.send("PRIVMSG " + channel + " :The value of pi is 3.14159265359.\n")
 
   if msg.find("+note") != -1:
     irc.send("NOTICE " + channel + " :Something failed. Sorry.\n")
