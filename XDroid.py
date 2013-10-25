@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 #
-# The most stupid IRC bot
+# Potentially good IRC bot
 #
 
 import socket
