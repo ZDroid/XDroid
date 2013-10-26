@@ -15,8 +15,7 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
 
 ## Commands
 
-All commands start with `+` to avoid conflicts with other IRC bots and
-services.
+Commands start with `+` to avoid conflicts with other IRC bots and services.
 
 * **+hi** — say *Hi!*
 * **+time** — display current time
