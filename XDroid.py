@@ -61,10 +61,8 @@ while 1:
 
   if msg.find("+feed") != -1:
     url = "http://zdroid.roon.io/feed"
-    for i in range(1,5):
-      irc.send("PRIVMSG " + channel + " :" +
-               feedparser.parse(url)["items"][i].title + " " +
-               feedparser.parse(url)["items"][i].link + "\n")
+    for i in feedparser.parse(url).entries:
+      irc.send("PRIVMSG " + channel + " :" + i.title + " " + i.link + "\n")
 
   if msg.find("+quit") != -1:
     irc.send("QUIT\n")
