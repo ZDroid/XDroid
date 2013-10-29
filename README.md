@@ -36,6 +36,8 @@ Variables you should change in `XDroid.py`:
 * `nick` (L17)
 * `url` (L63)
 
+To change range of feed items for parse, edit `n` in `range(1, n)` at L64.
+
 Don't change L35 and L36 because of they're for ping replies.
 
 ## Author
