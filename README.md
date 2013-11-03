@@ -11,7 +11,7 @@ Licensed under the MIT License.
 $ ./XDroid.py
 ```
 
-Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to kill bot.
+Press <kbd>Ctrl</kbd> + <kbd>C</kbd> in console to kill bot.
 
 ## Commands
 
