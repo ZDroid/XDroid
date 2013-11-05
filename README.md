@@ -32,13 +32,14 @@ Commands start with `+` to avoid conflicts with other IRC bots and services.
 Variables you should change in `XDroid.py`:
 
 * `server` (L15)
-* `channel` (L16)
-* `nick` (L17)
-* `url` (L63)
+* `port` (L16)
+* `channel` (L17)
+* `nick` (L18)
+* `url` (L64)
 
 To change range of feed items for parse, change `n` in `range(1, n)` at L64.
 
-Don't change L35 and L36 because of they're for ping replies.
+Don't change L36 and L37 because of they're for ping replies.
 
 ## Author
 

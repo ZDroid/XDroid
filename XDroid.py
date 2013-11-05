@@ -13,6 +13,7 @@ import feedparser
 # -------------
 
 server = "irc.freenode.net"
+port = 6667
 channel = "#zdroid"
 nick = "XDroid"
 
@@ -20,7 +21,7 @@ nick = "XDroid"
 # -----------------
 
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-irc.connect((server, 6667))
+irc.connect((server, port))
 irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
 irc.send("JOIN :" + channel + "\n")
@@ -73,7 +74,7 @@ while 1:
   if msg.find("+rcn") != -1:
     irc.send("QUIT\n")
     irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    irc.connect((server, 6667))
+    irc.connect((server, port))
     irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
     irc.send("NICK :" + nick + "\n")
     irc.send("JOIN :" + channel + "\n")
