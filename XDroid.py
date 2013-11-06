@@ -26,8 +26,8 @@ irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
 irc.send("JOIN :" + channel + "\n")
 
-# Commands
-# --------
+# Functions
+# ---------
 
 while 1:
   msg = irc.recv(2048).strip("\n\r")
@@ -36,6 +36,7 @@ while 1:
   if msg.find("PING :") != -1:
     irc.send("PONG :pingis\n")
 
+  # Commands
   if msg.find("+hi") != -1:
     irc.send("PRIVMSG " + channel + " :Hi!\n")
 

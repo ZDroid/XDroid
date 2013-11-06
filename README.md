@@ -35,11 +35,9 @@ Variables you should change in `XDroid.py`:
 * `port` (L16)
 * `channel` (L17)
 * `nick` (L18)
-* `url` (L64)
+* `url` (L65)
 
 To change range of feed items for parse, change `n` in `range(1, n)` at L64.
-
-Don't change L36 and L37 because of they're for ping replies.
 
 ## Author
 
