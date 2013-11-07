@@ -69,11 +69,11 @@ while 1:
                  feedparser.parse(url).entries[i].link + "\n")
 
   if msg.find("+quit") != -1:
-    irc.send("QUIT\n")
+    irc.send("QUIT :Bot died. RIP.\n")
     exit()
 
   if msg.find("+rcn") != -1:
-    irc.send("QUIT\n")
+    irc.send("QUIT :Bot died. RIP.\n")
     irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     irc.connect((server, port))
     irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
