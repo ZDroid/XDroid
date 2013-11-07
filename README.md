@@ -17,7 +17,6 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> in console to kill bot.
 
 Commands start with `+` to avoid conflicts with other IRC bots and services.
 
-* **+hi** — say *Hi!*
 * **+time** — display current time
 * **+channel** — display name of channel
 * **+pi** — display pi value
@@ -31,13 +30,15 @@ Commands start with `+` to avoid conflicts with other IRC bots and services.
 
 Variables you should change in `XDroid.py`:
 
-* `server` (L15)
-* `port` (L16)
-* `channel` (L17)
-* `nick` (L18)
+* `server` (L16)
+* `port` (L17)
+* `channel` (L18)
+* `nick` (L19)
 * `url` (L65)
 
-To change range of feed items for parse, change `n` in `range(1, n)` at L64.
+It would be nice to change welcome messages at L29.
+
+To change range of feed items for parse, change `n` in `range(1, n)` at L66.
 
 ## Author
 
