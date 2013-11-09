@@ -6,8 +6,8 @@
 #
 
 import socket
-from time import ctime
 from random import choice
+from time import ctime
 import feedparser
 
 # Configuration
@@ -26,8 +26,8 @@ irc.connect((server, port))
 irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
 irc.send("JOIN :" + channel + "\n")
-hey = ["Hi guys!", "Hey bots!", "\o/", "Yo!", "What's up!"]
-irc.send("PRIVMSG " + channel + " :" + choice(hey) + "\n")
+greetings = ["Hi guys!", "Hey bots!", "\o/", "Yo!", "What's up?"]
+irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
 
 # Commands
 # --------
@@ -79,4 +79,4 @@ while 1:
     irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
     irc.send("NICK :" + nick + "\n")
     irc.send("JOIN :" + channel + "\n")
-    irc.send("PRIVMSG " + channel + " :" + choice(hey) + "\n")
+    irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
