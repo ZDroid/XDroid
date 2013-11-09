@@ -40,6 +40,16 @@ It would be nice to change welcome messages at L29.
 
 To change range of feed items for parse, change `n` in `range(1, n)` at L66.
 
+### Adding a new command
+
+Adding new command isn't hard. The best solution is to append your commands to
+the file's end. Command syntax:
+
+```python
+  if msg.find("+command_name") != -1:
+    do_something()
+```
+
 ## Author
 
 **Zlatan Vasović**
