@@ -59,7 +59,7 @@ while 1:
     irc.send("PRIVMSG " + channel + " :  //   \ \ \n")
     irc.send("PRIVMSG " + channel + " : (|     | )\n")
     irc.send("PRIVMSG " + channel + " :/^\     /^\ \n")
-    irc.send("PRIVMSG " + channel + " :\___)-(___/\n")
+    irc.send("PRIVMSG " + channel + " :\_._)-(_._/\n")
 
   if msg.find("+feed") != -1:
     url = "http://zdroid.roon.io/feed"
