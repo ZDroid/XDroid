@@ -33,7 +33,7 @@ irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
 # --------
 
 while 1:
-  msg = irc.recv(2048).strip("\n\r")
+  msg = irc.recv(4096).strip("\n\r")
   print(msg)
 
   # Ping-pong
