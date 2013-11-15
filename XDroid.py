@@ -26,7 +26,7 @@ irc.connect((server, port))
 irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
 irc.send("JOIN :" + channel + "\n")
-greetings = ["Hi guys!", "Hey bots!", "\o/", "Yo!", "What's up?"]
+greetings = ["Hi guys!", "Hey!", "\o/", "Yo!", "What's up?"]
 irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
 
 # Commands
