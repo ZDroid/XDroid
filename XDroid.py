@@ -70,7 +70,7 @@ while 1:
 
   if msg.find("+quit") != -1:
     irc.send("QUIT :Bot died. RIP.\n")
-    exit()
+    quit()
 
   if msg.find("+rcn") != -1:
     irc.send("QUIT :Bot died. RIP.\n")
