@@ -43,7 +43,7 @@ To change range of feed items for parse, change `n` in `range(1, n)` at L66.
 ### Adding a new command
 
 Adding new command isn't hard. The best solution is to append your commands to
-the file's end, with consistent indent. Command syntax:
+the file's end, with consistent indent. Syntax:
 
 ```python
   if msg.find("+command_name") != -1:
