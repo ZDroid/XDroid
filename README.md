@@ -18,7 +18,7 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> in console to kill bot.
 Commands start with `+` to avoid conflicts with other IRC bots and services.
 
 * **+time** — display current time
-* **+channel** — display name of channel
+* **+channel** — display channel name
 * **+pi** — display pi value
 * **+note** — display notice
 * **+tux** — draw Tux
