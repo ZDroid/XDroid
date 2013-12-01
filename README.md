@@ -30,11 +30,12 @@ Commands start with `+` to avoid conflicts with other IRC bots and services.
 
 Variables you should change in `XDroid.py`:
 
-* `server` (L16)
-* `port` (L17)
-* `channel` (L18)
-* `nick` (L19)
-* `url` (L65)
+* `server` (L17)
+* `port` (L18)
+* `channel` (L19)
+* `nick` (L20)
+* `greetings` (L23)
+* `feed` (L26)
 
 It would be nice to change welcome messages at L29.
 

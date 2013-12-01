@@ -13,10 +13,17 @@ import feedparser
 # Configuration
 # -------------
 
+# Server
 server = "irc.freenode.net"
 port = 6667
 channel = "#zdroid"
 nick = "XDroid"
+
+# Greetings
+greetings = ["Hi guys!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
+
+# URLs
+feed = "http://zdroid.roon.io/feed"
 
 # Connect to server
 # -----------------
@@ -26,7 +33,6 @@ irc.connect((server, port))
 irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
 irc.send("JOIN :" + channel + "\n")
-greetings = ["Hi guys!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
 irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
 
 # Commands
@@ -62,11 +68,10 @@ while 1:
     irc.send("PRIVMSG " + channel + " :\_._)-(_._/\n")
 
   if msg.find("+feed") != -1:
-    url = "http://zdroid.roon.io/feed"
     for i in range(1,5):
         irc.send("PRIVMSG " + channel + " :" +
-                 feedparser.parse(url).entries[i].title + " " +
-                 feedparser.parse(url).entries[i].link + "\n")
+                 feedparser.parse(feed).entries[i].title + " " +
+                 feedparser.parse(feed).entries[i].link + "\n")
 
   if msg.find("+quit") != -1:
     irc.send("QUIT :Bot died. RIP.\n")
