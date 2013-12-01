@@ -23,6 +23,7 @@ nick = "XDroid"
 greetings = ["Hi guys!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
 
 # URLs
+site = "http://zdroid.github.io"
 feed = "http://zdroid.roon.io/feed"
 
 # Connect to server
@@ -66,6 +67,10 @@ while 1:
     irc.send("PRIVMSG " + channel + " : (|     | )\n")
     irc.send("PRIVMSG " + channel + " :/^\     /^\ \n")
     irc.send("PRIVMSG " + channel + " :\_._)-(_._/\n")
+
+  if msg.find("+site") != -1:
+    site = "http://zdroid.github.io"
+    irc.send("PRIVMSG " + channel + " :Check out " + site + "!\n")
 
   if msg.find("+feed") != -1:
     for i in range(1,5):

@@ -35,7 +35,8 @@ Variables you should change in `XDroid.py`:
 * `channel` (L19)
 * `nick` (L20)
 * `greetings` (L23)
-* `feed` (L26)
+* `site` (L26)
+* `feed` (L27)
 
 It would be nice to change welcome messages at L29.
 
