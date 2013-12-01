@@ -22,7 +22,7 @@ Commands start with `+` to avoid conflicts with other IRC bots and services.
 * **+pi** — display pi value
 * **+note** — display notice
 * **+tux** — draw Tux
-* **+site** — display `site` URL
+* **+site** — display URL of your site
 * **+feed** — parse RSS or Atom feed items
 * **+quit** — kill bot and exit from Python session
 * **+rcn** — reconnect bot
