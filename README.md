@@ -22,6 +22,7 @@ Commands start with `+` to avoid conflicts with other IRC bots and services.
 * **+pi** — display pi value
 * **+note** — display notice
 * **+tux** — draw Tux
+* **+site** — display `site` URL
 * **+feed** — parse RSS or Atom feed items
 * **+quit** — kill bot and exit from Python session
 * **+rcn** — reconnect bot
@@ -38,9 +39,7 @@ Variables you should change in `XDroid.py`:
 * `site` (L26)
 * `feed` (L27)
 
-It would be nice to change welcome messages at L29.
-
-To change range of feed items for parse, change `n` in `range(1, n)` at L66.
+To change range of feed items for parse, change `n` in `range(1, n)` at L76.
 
 ### Adding a new command
 
