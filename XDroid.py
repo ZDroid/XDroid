@@ -20,7 +20,7 @@ channel = "#zdroid"
 nick = "XDroid"
 
 # Greetings
-greetings = ["Hi guys!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
+greetings = ["Hi!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
 
 # URLs
 site = "http://zdroid.github.io"
