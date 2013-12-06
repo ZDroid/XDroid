@@ -69,7 +69,6 @@ while 1:
     irc.send("PRIVMSG " + channel + " :\_._)-(_._/\n")
 
   if msg.find("+site") != -1:
-    site = "http://zdroid.github.io"
     irc.send("PRIVMSG " + channel + " :Check out " + site + "!\n")
 
   if msg.find("+feed") != -1:
