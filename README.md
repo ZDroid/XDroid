@@ -47,7 +47,7 @@ Adding new command isn't hard. The best solution is to append your commands to
 the file end, with consistent indent. Syntax:
 
 ```python
-  if msg.find("+command_name") != -1:
+  if msg.find("+command") != -1:
     do_something()
 ```
 
