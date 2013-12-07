@@ -7,7 +7,7 @@
 
 import socket
 from random import choice
-from time import ctime
+import time
 import feedparser
 
 # Configuration
@@ -18,6 +18,8 @@ server = "irc.freenode.net"
 port = 6667
 channel = "#zdroid"
 nick = "XDroid"
+password = ""
+join_delay = 20
 
 # Greetings
 greetings = ["Hi!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
@@ -33,6 +35,8 @@ irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 irc.connect((server, port))
 irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
 irc.send("NICK :" + nick + "\n")
+irc.send("PRIVMSG NickServ :IDENTIFY " + password + "\n")
+time.sleep(join_delay)
 irc.send("JOIN :" + channel + "\n")
 irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
 
@@ -87,5 +91,7 @@ while 1:
     irc.connect((server, port))
     irc.send("USER " + nick + " " + nick + " " + nick + " :" + nick + "\n")
     irc.send("NICK :" + nick + "\n")
+    irc.send("PRIVMSG NickServ :IDENTIFY " + password + "\n")
+    time.sleep(join_delay)
     irc.send("JOIN :" + channel + "\n")
     irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
