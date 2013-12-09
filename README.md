@@ -43,6 +43,8 @@ Variables you should change in `XDroid.py`:
 * `site`
 * `feed`
 
+Don't change other variables, except you want to rewrite code.
+
 To change range of feed items for parse, change `n` in `range(1, n)` at L76.
 
 ### Adding a new command
