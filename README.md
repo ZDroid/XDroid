@@ -43,8 +43,6 @@ Variables you should change in `XDroid.py`:
 * `site`
 * `feed`
 
-Don't change other variables, except you want to rewrite code.
-
 ### Adding a new command
 
 Adding new command isn't hard. The best solution is to append your commands to
