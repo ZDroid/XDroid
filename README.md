@@ -35,9 +35,9 @@ Variables you should change in `XDroid.py`:
 
 * `server`
 * `port`
-* `channel`
 * `nick`
 * `password`
+* `channel`
 * `join_delay`
 * `greetings`
 * `site`

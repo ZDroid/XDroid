@@ -16,9 +16,11 @@ import feedparser
 # Server
 server = "irc.freenode.net"
 port = 6667
-channel = "#zdroid"
+
 nick = "XDroid"
 password = ""
+
+channel = "#zdroid"
 join_delay = 20
 
 # Greetings
