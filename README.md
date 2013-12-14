@@ -1,7 +1,8 @@
 # XDroid
 
-**XDroid** is a potentially good IRC bot. He uses
-[feedparser](http://code.google.com/p/feedparser/).
+> Potentially good IRC bot
+
+Requires [feedparser](http://code.google.com/p/feedparser/).
 
 Licensed under the MIT License.
 
