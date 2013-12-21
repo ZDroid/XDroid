@@ -30,7 +30,7 @@ greetings = ["Hi!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
 site = "http://zdroid.github.io"
 feed = "http://zdroid.roon.io/feed"
 
-# Connect to server
+# Server connection
 # -----------------
 
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -47,14 +47,14 @@ irc.send("PRIVMSG " + channel + " :" + choice(greetings) + "\n")
 
 while 1:
   msg = irc.recv(4096).strip("\n\r")
-  print(msg)
+  print msg
 
   # Ping-pong
   if msg.find("PING :") != -1:
     irc.send("PONG :pingis\n")
 
   if msg.find("+time") != -1:
-    irc.send("PRIVMSG " + channel + " :It's " + ctime() + ".\n")
+    irc.send("PRIVMSG " + channel + " :It's " + time.ctime() + ".\n")
 
   if msg.find("+channel") != -1:
     irc.send("PRIVMSG " + channel + " :We're on " + channel + ".\n")
