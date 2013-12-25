@@ -53,10 +53,3 @@ the file end, with consistent indent. Syntax:
   if msg.find("+command") != -1:
     do_something()
 ```
-
-## Author
-
-**Zlatan Vasović**
-
-* <https://twitter.com/zdr0id>
-* <https://github.com/ZDroid>
