@@ -1,6 +1,6 @@
 # XDroid
 
-> Potentially good IRC bot
+> Pure droid-powered IRC bot
 
 Requires [feedparser](http://code.google.com/p/feedparser/).
 
@@ -12,7 +12,7 @@ Licensed under the MIT License.
 $ ./XDroid.py
 ```
 
-Bot sends random greeting when join a channel.
+Bot sends random greeting when it joins a channel.
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> in console to kill bot.
 
