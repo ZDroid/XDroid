@@ -46,8 +46,10 @@ Variables you should change in `XDroid.py`:
 
 ### New command
 
-Adding a new command isn't hard. The best solution is to append your commands
-to the file end, with consistent indent. Syntax:
+Adding a new command isn't hard. The best way is to append your commands to the
+file end, with consistent indent.
+
+Syntax:
 
 ```python
   if msg.find("+command") != -1:
