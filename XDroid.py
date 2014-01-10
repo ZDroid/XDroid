@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 #
-# Potentially good IRC bot
+# Pure droid-powered IRC bot
 #
 
 import socket
