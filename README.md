@@ -51,7 +51,7 @@ Syntax:
 
 ```python
   if msg.find("+command") != -1:
-    do_something()
+    do_something
 ```
 
 ## License
