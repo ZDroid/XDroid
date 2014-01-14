@@ -24,7 +24,14 @@ channel = "#zdroid"
 join_delay = 20
 
 # Greetings
-greetings = ["Hi!", "Hey!", "\o/", "Yo!", "What's up?", "Sup!"]
+greetings = [
+  "Hi!",
+  "Hey!",
+  "\o/",
+  "Yo!",
+  "What's up?",
+  "Sup!"
+]
 
 # URLs
 site = "http://zdroid.github.io"
