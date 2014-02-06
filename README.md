@@ -28,7 +28,7 @@ Commands start with `+` to avoid conflicts with other IRC bots and services.
 * **+quit:** kill bot and exit from Python session
 * **+rcn:** reconnect bot
 
-## Customization
+## Configuration
 
 Variables you may want to change in `XDroid.py`:
 
@@ -42,7 +42,7 @@ Variables you may want to change in `XDroid.py`:
 * `site`
 * `feed`
 
-### New command
+## New command
 
 Adding a new command isn't hard. The best way is to append your commands to the
 file end, with consistent indent.
