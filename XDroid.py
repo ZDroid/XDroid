@@ -2,7 +2,8 @@
 # -*- coding:utf-8 -*-
 
 #
-# Pure droid-powered IRC bot
+# XDroid
+# Licensed under the MIT License.
 #
 
 import socket
