@@ -18,29 +18,29 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> in console to kill bot.
 
 Commands start with `+` to avoid conflicts with other IRC bots and services.
 
-* **+time:** display current time
-* **+channel:** display channel name
-* **+pi:** display pi value
-* **+note:** display notice
-* **+tux:** draw Tux
-* **+site:** display URL of your or any other site
-* **+feed:** parse RSS or Atom feed items
-* **+quit:** kill bot and exit from Python session
-* **+rcn:** reconnect bot
+- **+time:** display current time
+- **+channel:** display channel name
+- **+pi:** display pi value
+- **+note:** display notice
+- **+tux:** draw Tux
+- **+site:** display URL of your or any other site
+- **+feed:** parse RSS or Atom feed items
+- **+quit:** kill bot and exit from Python session
+- **+rcn:** reconnect bot
 
 ## Configuration
 
 Variables you may want to change in `XDroid.py`:
 
-* `server`
-* `port`
-* `nick`
-* `password`
-* `channel`
-* `join_delay`
-* `greetings`
-* `site`
-* `feed`
+- `server`
+- `port`
+- `nick`
+- `password`
+- `channel`
+- `join_delay`
+- `greetings`
+- `site`
+- `feed`
 
 ## New command
 
