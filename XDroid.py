@@ -88,9 +88,9 @@ while 1:
 
   if msg.find("+feed") != -1:
     for i in range(1,5):
-        irc.send("PRIVMSG " + channel + " :" +
-                 feedparser.parse(feed).entries[i].title + " " +
-                 feedparser.parse(feed).entries[i].link + "\n")
+      irc.send("PRIVMSG " + channel + " :" +
+               feedparser.parse(feed).entries[i].title + " " +
+               feedparser.parse(feed).entries[i].link + "\n")
 
   if msg.find("+quit") != -1:
     irc.send("QUIT :Bot died. RIP.\n")
