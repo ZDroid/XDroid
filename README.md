@@ -2,7 +2,7 @@
 
 > Pure droid-powered IRC bot
 
-Requires [feedparser](http://code.google.com/p/feedparser/).
+Requires [feedparser](https://github.com/kurtmckee/feedparser).
 
 ## Usage
 
@@ -56,4 +56,4 @@ Syntax:
 
 ## License
 
-MIT &copy; [Zlatan Vasović](https://github.com/ZDroid)
+MIT &copy; [Zlatan Vasović](https://github.com/zdroid)
